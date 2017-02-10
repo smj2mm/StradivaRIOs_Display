@@ -1,10 +1,10 @@
 # StradivaRIOs_Display
 
-Overview
+Overview  
 The StradivaRIOs is a proof-of-concept physical digital audio controller that emulates the way multiple instruments are played in different modes of operation. This controller communicates with a computer to produce sound. In order to interface with a user, two different sensors are used: an infrared distance sensor (IR sensor) to track the distance from a user’s hand to the device, and an array of capacitive touch sensors which function like a touchscreen. This data is then transformed into a protocol called Open Sound Control (OSC) within a National Instruments myRIO microcontroller. Finally, data from the myRIO is sent via UDP (User Datagram Protocol) packets over a private network to a laptop computer, which processes the data in a sound synthesis program to produce audio signals. 
 
 
-Tools Employed
+Tools Employed  
 Code Composer Studio – This program was used to code and debug the MSP430 processors in both the preliminary testing as well as the final application programming and testing. 
 
 LabVIEW -  LabVIEW was used to handle the majority of the processing. It held the state machine that handled input from the MSPs and formatted the processed data in the correct way for output via UDP. This was, by far, the easiest paradigm for coding the myRIO, which was our master processor. LabVIEW made many potentially difficult aspects of this project (SPI, UDP, OSC) much simpler than they would have been otherwise. 
